@@ -1,6 +1,7 @@
 Alunos(as), sejam bem-vindos(as)!
 
-Esse repositório vai acompanhar vocês até o final do curso, para mantermos a organização, sugerimos que vocês sigam a seguinte estrutura:
+Esse repositório vai acompanhar vocês até o final do curso, para mantermos a organização, 
+sugerimos que vocês sigam a seguinte estrutura:
 
 ```
 .
@@ -34,4 +35,5 @@ Esse repositório vai acompanhar vocês até o final do curso, para mantermos a 
 |
 ```
 
-Uma pasta para cada semana, dentro delas uma pasta para cada dia de aula e por fim uma pasta para o projeto da semana.
+Uma pasta para cada semana, dentro delas uma pasta para cada dia de aula 
+e por fim uma pasta para o projeto da semana.
