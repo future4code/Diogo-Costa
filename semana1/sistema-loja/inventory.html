@@ -8,43 +8,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style-css/inventory.css" />
     <title>BuuH Estoque</title>
   </head>
   <body>
-    <table border="">
-      <tr>
-        <th>Capa</th>
-        <th>Descrição</th>
-        <th>Preço</th>
-        <th>Quantidade disponível</th>
-      </tr>
-      <tr>
-        <td><img width="100px" src="https://images-na.ssl-images-amazon.com/images/I/51TUZ24Hw%2BL.jpg" alt="Capa do livro"></td>
-        <td>O Gato Preto</td>
-        <td>R$ 55,90</td>
-        <td>14 unidades</td>
-      </tr>
-      <tr>
-        <td><img width="100px" src="https://images-na.ssl-images-amazon.com/images/I/512pQ-TzvJL.jpg" alt="Capa do livro"> </td>
-        <td>O Chamado de Cthulhu</td>
-        <td>R$ 25,90</td>
-        <td>67 unidades</td>
-      </tr>
-      <tr>
-        <td><img width="100px" src="https://images-na.ssl-images-amazon.com/images/I/813WmYQ9bNL.jpg" alt="Capa do livro"> </td>
-        <td>O Iluminado</td>
-        <td>R$ 99,90</td>
-        <td>02 unidades</td>
-      </tr>
-      <tr>
-        <td><img width="100px" src="https://images-na.ssl-images-amazon.com/images/I/91Bi5WE31fL.jpg" alt="Capa do livro"></td>
-        <td>O Médico e o Monstro</td>
-        <td>R$ 13,90</td>
-        <td>99 unidades</td>
-      </tr>
-    </table>
+    <!-- Logo + barra de navegação -->
+    <header>
+      <div id="div-logo">
+        <h1 id="logo-brand">BuuH</h1>
+      </div>
+      <div id="div-nav">
+        <ul>
+          <a href="/inventory.html">Inventário</a>
+          <a href="/add-product.html">Novos Produtos</a>
+          <a href="/employees.html">Colaboradores</a>
+        </ul>
+      </div>
+    </header>
 
-    <br />
-    <a href="/index.html">Voltar para HOME</a>
+    <section>
+      <table border="">
+        <tr>
+          <th>Capa</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade disponível</th>
+        </tr>
+        <tr>
+          <td>
+            <img
+              width="100px"
+              src="https://images-na.ssl-images-amazon.com/images/I/51TUZ24Hw%2BL.jpg"
+              alt="Capa do livro"
+            />
+          </td>
+          <td>O Gato Preto</td>
+          <td>R$ 55,90</td>
+          <td>14 unidades</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              width="100px"
+              src="https://images-na.ssl-images-amazon.com/images/I/512pQ-TzvJL.jpg"
+              alt="Capa do livro"
+            />
+          </td>
+          <td>O Chamado de Cthulhu</td>
+          <td>R$ 25,90</td>
+          <td>67 unidades</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              width="100px"
+              src="https://images-na.ssl-images-amazon.com/images/I/813WmYQ9bNL.jpg"
+              alt="Capa do livro"
+            />
+          </td>
+          <td>O Iluminado</td>
+          <td>R$ 99,90</td>
+          <td>02 unidades</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              width="100px"
+              src="https://images-na.ssl-images-amazon.com/images/I/91Bi5WE31fL.jpg"
+              alt="Capa do livro"
+            />
+          </td>
+          <td>O Médico e o Monstro</td>
+          <td>R$ 13,90</td>
+          <td>99 unidades</td>
+        </tr>
+      </table>
+    </section>
+    <div class="back">
+      <a href="/index.html">HOME</a>
+    </div>
+
+    <!-- Criar links para footer -->
+    <footer>
+      <p>
+        Suporte Manual Contato
+      </p>
+    </footer>
   </body>
 </html>
