@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header e Footer são os mesmos em todas as páginas */
+
+body {
+  width: 100%;
+  background-image: url(imagens/background-image.jpg);
+  background-size: cover;
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.4);
+}
+#div-logo {
+  display: inline-block;
+  width: 70vw;
+  padding: 20px 20px 0 20px;
+  font-size: 48px;
+}
+
+#div-nav {
+  display: inline-block;
+  padding: 7px;
+  margin: 10px 50px 0 0;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+footer {
+  height: 50px;  
+  text-align: end;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Abaixo são as costumizações de cada página */
+
+#welcome-msg {
+  border: solid 2px;
+  margin: 30%;
+  padding: 50px 150px;
+}
