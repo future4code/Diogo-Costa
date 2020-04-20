@@ -69,6 +69,7 @@ div > p:first-child {
   background-color: #2274a5;
   color: white;
   padding: 60px;
+  border: solid black;
 }
 
 #container-de-descricao > p {
@@ -77,6 +78,9 @@ div > p:first-child {
 
 #container-de-descricao > ol {
   padding: 15px 0px;
+  width: 30%;
+  margin: auto;
+  /*   list-style-position: inside; */
 }
 
 #container-para-comprar {
