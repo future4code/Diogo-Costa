@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*   
+div1
+div2
+div3
+
+btn1
+btn2
+
+
+*/
+
+div:first-of-type {
+  background-color: cornflowerblue;
+  height: 100px;
+  color: white;
+  text-align: center;
+}
+
+div h2 {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+}
+
+div:last-of-type {
+  background-color: crimson;
+}
+
+table {
+  width: 50%;
+  margin: auto;
+  border-spacing: 0;
+}
+
+th {
+  background-color: orange;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: yellow;
+}
