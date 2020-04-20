@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #151515;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Header nav-bar contact */
+
+.container-nav {
+  padding: 30px 30px 0 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 24px;
+}
+
+.menu-nav {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  color: #03fdd7;
+}
+
+/* Social media */
+.contact-img {
+  width: 20px;
+  padding: 0 5px;
+}
+
+.contact {
+  padding: 0 138px;
+}
+
+/* SECTION */
+section {
+  background-color: white;
+}
+
+/*  Estudante Na +
+Trabalhando na
+Blocks  */
+
+.container-div1 {
+  padding: 30px 30px 0 30px;
+  margin: 50px auto;
+}
+
+.container-div2 {
+  padding: 0 30px 30px 30px;
+  margin: 50px auto;
+}
+
+/* Fonts colors sizes */
+
+.h1-title {
+  color: black;
+  font-size: 88px;
+}
+
+.h1-out {
+  color: black;
+  font-size: 68px;
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.h1-in {
+  color: #03fdd7;
+  font-size: 78px;
+}
+
+/* Galery */
+
+.container-galery {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  margin: 100px 0;
+}
+
+.text-galery {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+}
+
+.p-title {
+  font-size: 24px;
+  opacity: 0.3;
+  padding: 5px;
+}
+
+.p-place {
+  font-size: 34px;
+  padding: 5px;
+}
+
+.p-link-pc1 {
+  opacity: 0.2;
+  padding: 15px;
+}
+
+.p-link-pc1:hover {
+  color: #cd4d00;
+  opacity: 1;
+}
+
+.p-link-pc2 {
+  opacity: 0.2;
+  padding: 15px;
+  text-decoration: line-through;
+}
+
+.p-link-mbl {
+  opacity: 0.2;
+  padding: 15px;
+}
+
+.p-link-mbl:hover {
+  color: #3eddd7;
+  opacity: 1;
+}
+
+.image-pc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.image-pc img {
+  width: 820px;
+  padding: 5%;
+}
+
+.image-mbl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.image-mbl img {
+  width: 300px;
+  padding: 5%;
+}
+
+/* Aboute me */
+
+.container-aboutme {
+  background-color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-aboutme img {
+  width: 1000px;
+  height: 100%;
+}
+
+/* Skills & Expretise */
+.container-skill {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-skill img {
+  width: 1000px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 955px) {
+  .h1-title {
+    font-size: 68px;
+  }
+
+  .h1-out {
+    color: black;
+    font-size: 46px;
+    opacity: 0.3;
+    text-decoration: line-through;
+  }
+
+  .h1-in {
+    color: #03fdd7;
+    font-size: 58px;
+  }
+
+  .image-pc img {
+    width: 445px;
+  }
+
+  .mobile2 {
+    display: none;
+  }
+}
+
+/* Contact */
+
+/* Footer */
+
+footer {
+  opacity: 0.3;
+  font-size: 8px;
+  padding: 50px 30px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+footer h1 {
+  padding: 40px;
+}
+
+footer h1 b {
+  color: #03fdd7;
+  font-size: 18px;
+}
+
+footer p {
+  font-size: 10px;
+  padding: 20px;
+  margin: 100px auto;
+}
