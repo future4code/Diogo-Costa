@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 100vh;
+}
+
+.container-head {
+  display: flex;
+  flex: 1;
+}
+
+header {
+  background-color: #2ecc40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+nav {
+  background-color: #ffdc00;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 4;
+}
+
+section {
+  background-color: #f012be;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 9;
+}
+
+.container-contents {
+  display: flex;
+  flex: 5;
+}
+
+.content2 {
+  background-color: #0074d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.content3 {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.content4 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.image {
+  background-color: #ff4136;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.extra {
+  background-color: #01ff70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #b10dc9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* 
+#2ECC40
+#FFDC00
+#F012BE
+#0074D9
+#FF4136
+#01FF70
+#B10DC9 */
