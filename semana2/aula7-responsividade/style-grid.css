@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: gray;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
+  height: 100vh;
+  width: 700px;
+  display: grid;
+  padding: 10px ;
+  grid-template-areas:
+    "iR iR iR iR iR iR"
+    "i1 i1 i2 i2 i3 i3"
+    "i4 i4 i5 i5 i6 i6"
+    "i7 i7 i7 i8 i8 i8"
+    "i9 i9 i10 i10 i11 i11";
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.itemRed {
+  background-color: red;
+  display: grid;
+  margin: -10px -10px 0 -10px;
+  justify-items: center;
+  align-items: center;
+  grid-area: iR;
+}
+
+/* .itemRed {
+  background-color: red;
+} */
+
+.item1 {
+  background-color: blue;
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i1;
+}
+
+.item2 {
+  background-color: yellow;
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i2;
+}
+
+.item3 {
+  background-color: green;
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i3;
+}
+
+.item4 {
+  background-color: blue;
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i4;
+}
+
+.item5 {
+  background-color: yellow;
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i5;
+}
+
+.item6 {
+  background-color: green;
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i6;
+}
+
+.item7 {
+  background-color: black;
+  color: white;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i7;
+}
+
+.item8 {
+  background-color: black;
+  color: white;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i8;
+}
+
+.item9 {
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i9;
+}
+
+.item10 {
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i10;
+}
+
+.item11 {
+  border: 2px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: i11;
+}
+
+@media screen and (min-device-width: 500px) and (max-width: 699px) {
+  .container {
+    height: 100vh;
+    width: 95vw;
+    display: grid;
+    grid-template-areas:
+      "iR iR"
+      "i1 i2"
+      "i3 i3"
+      "i4 i5"
+      "i6 i6"
+      "i7 i8"
+      "i9 i10"
+      "i11 i11";
+    grid-template-rows: repeat(5, 0.5fr) 2fr repeat(2, 0.5fr);
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-device-width: 499px) {
+  .container {
+    height: 100vh;
+    width: 97vw;
+    display: grid;
+    grid-template-areas:
+      "iR iR"
+      "i1 i1"
+      "i2 i2"
+      "i3 i3"
+      "i4 i4"
+      "i5 i5"
+      "i6 i6"
+      "i7 i7"
+      "i8 i8"
+      "i9 i9"
+      "i10 i10"
+      "i11 i11";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+}
