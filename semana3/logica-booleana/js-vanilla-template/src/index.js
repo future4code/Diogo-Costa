@@ -144,7 +144,7 @@ const dialogo5 = prompt(
   "Sim? Você falou sim? Nunca aconteceu isso antes, vou chamar meu gerente, espera aqui"
 );
 console.log(dialogo5);
-.
+
 console.log(`
 <----------------------------------------->
 
@@ -168,3 +168,5 @@ console.log(
     descontoKwh +
     "R$"
 );
+
+
