@@ -144,10 +144,20 @@ const dialogo5 = prompt(
   "Sim? Você falou sim? Nunca aconteceu isso antes, vou chamar meu gerente, espera aqui"
 );
 console.log(dialogo5);
+.
+console.log(`
+<----------------------------------------->
 
-/*3-Questão:*/
+`);
 
-/* a. Calcule e mostre o valor a ser pago por uma residência que consuma 280 quilowatt-hora; */
+/*3-Questão:
+
+ a. Calcule e mostre o valor a ser pago por uma residência que consuma 280 quilowatt-hora;
+
+ b. Altere o programa para receber mais um valor: a porcentagem de desconto. 
+Calcule e mostre o valor a ser pago pela mesma residência acima considerando 15% de desconto.
+*/
+
 const custoKwh = 0.05;
 const consumoKwh = 280;
 const descontoKwh = (custoKwh * consumoKwh * 15) / 100;
@@ -158,7 +168,3 @@ console.log(
     descontoKwh +
     "R$"
 );
-
-/* b. Altere o programa para receber mais um valor: a porcentagem de desconto. 
-Calcule e mostre o valor a ser pago pela mesma residência acima considerando 15% de desconto.
-*/
