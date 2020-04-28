@@ -1,0 +1,54 @@
+1) Dê a ordem dos comandos do git para se fazerem as ações abaixo:
+
+a. Criar uma nova branch e acessá-la
+git checkout -b nova-branch
+
+b. Criar uma nova versão do código, com alterações que fizemos
+git commit
+        
+c. Subir uma branch para o GitHub
+git push origin nova-branch
+
+d. Atualizar a branch master local com as alterações remotas
+git pull 
+
+2) Quais as diferenças entre um elemento block e um inline?
+ Dê 3 exemplos de elementos block e 3 de elementos inline, 
+ explique as situações em que podemos utilizá-los.
+
+Block ocupa 100% do width do elemento pai.
+ex: div, p, header.
+Usado quando vamos manipular o width, height, padding e margin dos elementos.
+
+
+Inline ocupa apenas o width espaço necessário.
+ex: strong, span, img.
+Usado quando vamos manipular apenas fontes e outras decorações.
+
+
+3 )Considerando que você só possa usar CSS, explique como você faria para:
+a. centralizar horizontalmente dois elementos quaisquer
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+b. garantir que um elemento sempre fique grudado no fim da tela
+position: fixed;
+bottom: 0;
+
+c. garantir que todas os parágrafos p de uma div tenham a cor de texto verde, 
+com exceções da primeira (que deve ter a cor de texto amarela) 
+e da última (que deve ficar com a cor de texto azul)
+first-child() no primeiro p
+last-child() no ultimo p
+
+
+4. Explique para que servem as abas Element e Console da Chrome Dev Tools
+Element
+É usado para acessar os alementos HTML e CSS de uma página.
+
+Console
+É usado para acessar e manipular o javascript de uma página.
+
+
