@@ -96,8 +96,8 @@ if (numero1 > 0 && numero2 > 0) {
     mensagem = "Número 1 é menor ou igual ao 2!";
   }
 }
-
-console.log(mensagem);
+// < ---------------------   ATENÇÃO ------------------->
+// console.log(mensagem); precisei comentar a linha porque ela quebra a execução.
 
 /*
 
@@ -169,13 +169,39 @@ https://drive.google.com/file/d/1jhGIk7qgjVfiNREhx5cWf8vUzgJnHR_M/view?usp=shari
 
 /* B. */
 
-//let vertebrados = prompt("É vertebrado? S/N: ");
+let res1 = prompt("O animal tem ossos? sim/não");
 
-/*
-let mamiferos = prompt("É mamífero? S/N");
-let humano = prompt("É racional? S/N");
-let penas = prompt("Tem penas? S/N");
-let terrestre = prompt("É terrestre? S/N");
-let ambiente = prompt("Vive em ambiente aquático? S/N");
-
-*/
+if (res1 === "sim") {
+  let res2 = prompt("O animal tem pelos? sim/não");
+  if (res2 === "sim") {
+    let res3 = prompt("O animal é racional? sim/não");
+    if (res3 === "sim") {
+      console.log("Humano"); // end
+    }
+    if (res3 === "não") {
+      console.log("Mamífero não humano"); // end
+    }
+  }
+  if (res2 === "não") {
+    let res4 = prompt("O animal tem penas? sim/não");
+    if (res4 === "sim") {
+      console.log("Ave"); // end
+    }
+    if (res4 === "não") {
+      let res5 = prompt("O animal é terrestre? sim/não");
+      if (res5 === "sim") {
+        let res6 = prompt("O animal terrestre vive também na água? sim/não");
+        if (res6 === "sim") {
+          console.log("Anfíbio"); // end
+        } else {
+          console.log("Réptil"); // end
+        }
+      }
+      if (res5 === "não") {
+        console.log("Peixe"); // end
+      }
+    }
+  }
+} else {
+  console.log("Invertebrado"); // end
+}
