@@ -11,38 +11,73 @@
  * 
  */
 
-const card1 = comprarCarta(); // Sorteia uma carta. Por exemplo, o rei de ouros
+const card1 = comprarCarta();
 const card2 = comprarCarta();
+const card3 = comprarCarta();
+const card4 = comprarCarta();
+const card5 = comprarCarta();
+const card6 = comprarCarta();
+
+let hand1 = card1.texto;
+let hand2 = card2.texto;
+let hand3 = card3.texto;
+let hand4 = card4.texto;
+let hand5 = card5.texto;
+let hand6 = card6.texto;
 
 console.log("Bem vindo ao jogo de Blackjack");
 
 const start = confirm("Quer jogar?");
-let player1 = card1.texto;
-let player2 = card2.texto;
 
 while (start === true) {
-  console.log("ok");
-  break;
-  if (start === false) {
-    console.log("parou o loop");
+  console.log(`
+   Usuário - cartas: ${hand1} ${hand2} - pontuação: ${
+    card1.valor + card2.valor
+  }`);
+  console.log(`
+   Computador - cartas: ${hand4} ${hand5} - pontuação: ${
+    card4.valor + card5.valor
+  }`);
+  const again = confirm("Quer comprar mais uma?");
+
+  if (again === true) {
+    console.log(
+      `Usuário recebeu: ${hand3} 
+      totalizando: ${card1.valor + card2.valor + card3.valor}`
+    );
+    console.log(
+      `Computador recebeu: ${hand6} 
+      totalizando: ${card4.valor + card5.valor + card6.valor}`
+    );
+    if (
+      card1.valor + card2.valor + card3.valor >
+        card4.valor + card5.valor + card6.valor &&
+      card1.valor + card2.valor + card3.valor <= 21
+    ) {
+      console.log("O usuário ganhou");
+    }
+    if (
+      card1.valor + card2.valor + card3.valor <
+        card4.valor + card5.valor + card6.valor &&
+      card4.valor + card5.valor + card6.valor <= 21
+    ) {
+      console.log("O computador ganhou");
+    }
+  } else {
+    if (
+      card1.valor + card2.valor + card3.valor >
+        card4.valor + card5.valor + card6.valor &&
+      card1.valor + card2.valor + card3.valor <= 21
+    ) {
+      console.log("O usuário ganhou");
+    }
+    else { (
+      card1.valor + card2.valor + card3.valor <
+        card4.valor + card5.valor + card6.valor &&
+      card4.valor + card5.valor + card6.valor <= 21
+    ) 
+      console.log("O computador ganhou");
+    }
     break;
   }
 }
-
-/* 
-let start = confirm("Quer jogar?");
-let hand1 = card1.texto;
-let hand2 = card2.texto;
-
-if (start === true) {
-  console.log(`
-   Você recebeu as cartas ${hand1}, ${hand2} 
-   totalizando: ${card1.valor + card2.valor}`);
-  let again = confirm("Quer comprar mais uma? ");
-  if (again === true) {
-    console.log(``);
-  }
-} else {
-  console.log("O jogo Acabou");
-}
- */
