@@ -37,3 +37,4 @@ function dailyTask() {
   }
   document.querySelector("input").value = "";
 }
+
