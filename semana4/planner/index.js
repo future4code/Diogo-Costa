@@ -3,7 +3,6 @@ function dailyTask() {
   let text = document.createTextNode(task);
   let newTask = document.createElement("li");
   newTask.appendChild(text);
-  //document.querySelector("#seg").appendChild(newTask);
 
   let weekDay = document.querySelector("select").value;
 
