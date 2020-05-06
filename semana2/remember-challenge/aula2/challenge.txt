@@ -1,0 +1,11 @@
+Pois bem, estão ansiosos para poderem usarem flexbox e grid? 
+Hoje é o dia! Pesquisem sobre eles dois e respondam às seguintes perguntas:
+1) Em que situações podemos usar o flexbox?
+Layouts mais simples em formato empilhado.
+
+2) Quais as diferenças entre o flexbox e o grid?
+Flex box faz layouts em linhas OU colunas.
+Grid usa linhas e colunas simultaneamente gerando um 'grid'.
+
+3) Em que situações podemos usar o grid?
+Layouts compostos de muitas divisões, usando várias áreas diferentes.

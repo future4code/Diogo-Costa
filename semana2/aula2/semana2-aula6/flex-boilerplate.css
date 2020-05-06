@@ -1,0 +1,35 @@
+div {
+  border: 2px solid #313b3e;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 600px;
+  background-color: #a8bbc6;
+  display: flex; /* Se não definar width e height o flex define para você */
+  flex-direction: row-reverse; /* Define o main axis */
+  justify-content: space-evenly; /* Em relação ao main axis */
+  align-items: baseline; /* Em relação ao eixo transversal */
+}
+
+.item {
+  background-color: #eeeeee;
+}
+
+#item1 {
+  width: 100px;
+  align-self: center;
+}
+
+#item2 {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+#item3 {
+  height: 300px;
+}

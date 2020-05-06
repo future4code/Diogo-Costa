@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #acbbc5;
+  width: 600px;
+  height: 300px;
+  border: solid black 2px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#item1 {
+  background-color: #eeeeee;
+  border: solid black 2px;
+  border-radius: 8px;
+  width: 100px;
+  order: 2;
+}
+
+#item2 {
+  background-color: #eeeeee;
+  border: solid black 2px;
+  border-radius: 8px;
+  height: 80px;
+  width: 80px;
+  order: 3;
+}
+
+#item3 {
+  background-color: #eeeeee;
+  border: solid black 2px;
+  border-radius: 8px;
+  height: 300px;
+  order: 1;
+}
