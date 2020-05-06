@@ -4,6 +4,10 @@ function dailyTask() {
   let newTask = document.createElement("li");
   newTask.appendChild(text);
 
+  if (task === "") {
+    alert("Escreva algo!");
+  }
+
   let weekDay = document.querySelector("select").value;
 
   switch (weekDay) {
@@ -38,3 +42,15 @@ function dailyTask() {
   document.querySelector("input").value = "";
 }
 
+function lineThrough() {
+  if (document.querySelector("li")) {
+    document.querySelectorAll("li").style.textDecoration = "line-through";
+  }
+}
+
+//.onclick = true)) {
+
+/* function lineThrough() {
+  document.querySelector("li").style.textDecoration = "line-through";
+}
+ */
