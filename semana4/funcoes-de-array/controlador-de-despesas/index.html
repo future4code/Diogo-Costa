@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Form Cadastro -->
+    <form>
+      <h2>Controle de Despesas</h2>
+      <label for="">Valor</label>
+      <input id="gasto" type="text" />
+      <label for="">Tipo</label>
+      <select id="tipo">
+        <option value="0">Selecione uma opção</option>
+        <option value="1">Contas</option>
+        <option value="2">Academia</option>
+        <option value="3">Rolê</option>
+        <option value="4">Comida</option>
+      </select>
+      <label for="">Descrição</label>
+      <input id="descricao" type="text" />
+      <button onclick="despesas(event)">Cadastrar</button>
+    </form>
+
+    <form>
+      <h2>Despesas Detalhadas</h2>
+      <label for="">Tipo</label>
+      <select>
+        <option value="1">Contas</option>
+        <option value="2">Academia</option>
+        <option value="3">Rolê</option>
+        <option value="4">Comida</option>
+      </select>
+      <label for="">Valor Mínimo</label>
+      <input type="text" />
+      <label for="">Valor Máximo</label>
+      <input type="text" />
+      <div>
+        <button onclick="filtro()">Filtrar</button>
+        <button>Limpar Filtros</button>
+      </div>
+    </form>
+
+    <div>
+      <form action="">
+        <h2>Extrato</h2>
+        <label>Valor total:</label>
+        <p>$</p>
+      </form>
+    </div>
+  </body>
+</html>

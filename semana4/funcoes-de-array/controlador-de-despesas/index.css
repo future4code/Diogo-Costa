@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 10px;
+  border: solid gray 1px;
+  height: 260px;
+
+}
+
+label {
+    padding-top: 10px;
+}
