@@ -1,4 +1,5 @@
 import React from "react";
+import menu from "./assets/menu.svg";
 import "./App.css";
 
 function App() {
@@ -12,7 +13,10 @@ function App() {
     <div>
       <div className="tela-inteira">
         <header>
-          <h1>Lab Tube</h1>
+          <div className="menu-logo">
+            <img src={menu} alt="menu" />
+            <h1>Lab Tube</h1>
+          </div>
           <input type="text" placeholder="Busca" id="campoDeBusca" />
         </header>
 
