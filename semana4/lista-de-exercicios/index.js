@@ -34,7 +34,7 @@ O segundo IF testa se os items da lista são maiores em relação a let de valor
 
 // for, .forEach, .map
 
-/* const lista = [1, 2, 3, 4, 5];
+const lista = [1, 2, 3, 4, 5];
 
 for (numero of lista) {
   console.log(numero);
@@ -47,7 +47,6 @@ lista.forEach((numero) => {
 lista.map((numero) => {
   console.log(numero);
 });
- */
 
 // resp. 2
 
@@ -66,17 +65,17 @@ e. true
 O código dele não tem break, acho que gera um loop dessa forma.
 */
 
-/* let numerosPares = 5; // número a ser testado
+let numerosPares = 5; // número a ser testado
 
 for (let i = 0; i < numerosPares * 2; i++) {
   if (i % 2 === 0) {
     console.log(i);
   }
-} */
+}
 
 // resp. 4
 
-/* function triangulo(lado1, lado2, lado3) {
+function triangulo(lado1, lado2, lado3) {
   if (lado1 === lado2 && lado1 === lado3) {
     console.log("Equilatero");
   } else if (lado1 !== lado2 && lado1 !== lado3 && lado2 !== lado3) {
@@ -87,11 +86,10 @@ for (let i = 0; i < numerosPares * 2; i++) {
 }
 
 triangulo(1, 3, 5);
- */
 
 // resp. 5
 
-/* function respostaDoExercicioCinco(a, b) {
+function respostaDoExercicioCinco(a, b) {
   function qualMaior() {
     a > b ? console.log(`O maior é ${a}`) : console.log(`O maior é ${b}`);
   }
@@ -116,13 +114,12 @@ triangulo(1, 3, 5);
 }
 
 respostaDoExercicioCinco(150, 30);
- */
 
 // Exercícios de funções
 
 // resp. 1
 
-/* const array = [4, 1, 25, 3, 5, 66, 7, 8, 9, 20];
+const array = [4, 1, 25, 3, 5, 66, 7, 8, 9, 20];
 
 function segundoMaiorEMenor() {
   array.sort((a, b) => {
@@ -132,16 +129,16 @@ function segundoMaiorEMenor() {
 }
 
 segundoMaiorEMenor();
- */
 
 // resp. 2
 
-/* const HelloWorld = function () {
-  alert("Hello Future4");
+const HelloWorld = function () {
+  //alert("Hello Future4");
+  // descomentar para testar o alert
+
 };
 
 HelloWorld();
- */
 
 /*  EXERCÍCIOS DE OBJETOS */
 
@@ -150,3 +147,94 @@ HelloWorld();
 mas os arrays são um subclasse que tem algumas funções a mais */
 
 //resp. 2
+
+function criaRetangulo(lado1, lado2) {
+  let objeto = {};
+  objeto.lado1 = lado1;
+  objeto.lado2 = lado2;
+  objeto.perimetro = 2 * (lado1 + lado2);
+  objeto.area = lado1 * lado2;
+
+  //return objeto;
+  console.log(objeto);
+}
+
+criaRetangulo(5, 2);
+
+// resp. 3
+
+const filmeFAvorito = {
+  titulo: "Clube da Luta",
+  ano: 1999,
+  diretor: "David Fincher",
+  atores: ["Brad Pitt", " Edward Norton"],
+  atrizes: "Helena Bohan Carter ",
+};
+
+console.log(
+  `Venha assistir o fime ${filmeFAvorito.titulo}, de ${filmeFAvorito.ano}, 
+   dirigido por ${filmeFAvorito.diretor} 
+   e estrelado por ${filmeFAvorito.atores} e ${filmeFAvorito.atrizes}`
+);
+
+//resp. 4
+
+const euMesmo = {
+  nome: "Diogo",
+  idade: 39,
+  email: "ghostlabz@gmail.com",
+  endereco: "Estrada velha de Sorocaba nº 683",
+};
+
+function anonimizarPessoa() {
+  let euAnonimo = {};
+  (euAnonimo.nome = "ANÔNIMO"),
+    (euAnonimo.idade = euMesmo.idade),
+    (euAnonimo.email = euMesmo.email),
+    (euAnonimo.endereco = euMesmo.endereco),
+    console.log(euAnonimo);
+}
+
+anonimizarPessoa();
+
+/* EXERCÍCIOS DE FUNÇÕES DE ARRAY */
+
+// resp. 1
+
+const pessoas = [
+  { nome: "Pedro", idade: 20 },
+  { nome: "João", idade: 10 },
+  { nome: "Paula", idade: 12 },
+  { nome: "Artur", idade: 89 },
+];
+
+// .a
+
+let maiores = pessoas.filter((maior) => {
+  return maior.idade >= 20;
+});
+
+let menores = pessoas.filter((menor) => {
+  return menor.idade < 20;
+});
+
+console.log(maiores);
+console.log(menores);
+
+//resp. 2
+
+const arrayDeNumeros = [1, 2, 3, 4, 5, 6];
+
+function multiplicaPorDois(n) {
+  console.log(n * 2);
+}
+
+arrayDeNumeros.forEach(multiplicaPorDois);
+
+/* function multiplicaPorTres(n) {
+  console.log(n * 3);
+  n.toString();
+}
+
+let porTresString = arrayDeNumeros.forEach(multiplicaPorTres);
+ */
