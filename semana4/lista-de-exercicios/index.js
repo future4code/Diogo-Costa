@@ -66,11 +66,87 @@ e. true
 O código dele não tem break, acho que gera um loop dessa forma.
 */
 
-let numerosPares = 5; // número a ser testado
+/* let numerosPares = 5; // número a ser testado
 
 for (let i = 0; i < numerosPares * 2; i++) {
   if (i % 2 === 0) {
     console.log(i);
   }
+} */
+
+// resp. 4
+
+/* function triangulo(lado1, lado2, lado3) {
+  if (lado1 === lado2 && lado1 === lado3) {
+    console.log("Equilatero");
+  } else if (lado1 !== lado2 && lado1 !== lado3 && lado2 !== lado3) {
+    console.log("Escaleno");
+  } else {
+    console.log("Isóceles");
+  }
 }
 
+triangulo(1, 3, 5);
+ */
+
+// resp. 5
+
+/* function respostaDoExercicioCinco(a, b) {
+  function qualMaior() {
+    a > b ? console.log(`O maior é ${a}`) : console.log(`O maior é ${b}`);
+  }
+  qualMaior();
+
+  function divisiveis() {
+    a % b === 0
+      ? console.log(`${a} é divisível por ${b}`)
+      : console.log(`${a} não é divisível por ${b}`);
+    b % a === 0
+      ? console.log(`${b} é divisivel por ${a}`)
+      : console.log(`${b} não é divisivel por ${a}`);
+  }
+  divisiveis();
+
+  function diferenca() {
+    a > b
+      ? console.log(`A diferença entre eles é de ${a - b}`)
+      : console.log(`A diferença entre eles é ${b - a}`);
+  }
+  diferenca();
+}
+
+respostaDoExercicioCinco(150, 30);
+ */
+
+// Exercícios de funções
+
+// resp. 1
+
+/* const array = [4, 1, 25, 3, 5, 66, 7, 8, 9, 20];
+
+function segundoMaiorEMenor() {
+  array.sort((a, b) => {
+    return a - b;
+  });
+  console.log(array[1], array[array.length - 2]);
+}
+
+segundoMaiorEMenor();
+ */
+
+// resp. 2
+
+/* const HelloWorld = function () {
+  alert("Hello Future4");
+};
+
+HelloWorld();
+ */
+
+/*  EXERCÍCIOS DE OBJETOS */
+
+// resp. 1
+/* Em javascript ambos são objetos, tudo é objeto na verdade 
+mas os arrays são um subclasse que tem algumas funções a mais */
+
+//resp. 2
