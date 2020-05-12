@@ -19,7 +19,6 @@ function App() {
           nome="Diogo Gaspar"
           descricao="Oi, eu sou o Gaspar, aspirante a desenvolvedor FullStack aqui estudando na Labenu_"
         />
-
         <ImagemButton
           imagem="https://image.flaticon.com/icons/png/512/117/117472.png"
           texto="Ver mais"
