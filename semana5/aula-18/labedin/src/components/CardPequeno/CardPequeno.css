@@ -1,0 +1,8 @@
+.smallcard-container div {
+  display: flex;
+  flex-direction: row;
+  border: solid black 1px;
+  border-radius: 50px;
+  padding: 20px;
+  margin: 10px;
+}
