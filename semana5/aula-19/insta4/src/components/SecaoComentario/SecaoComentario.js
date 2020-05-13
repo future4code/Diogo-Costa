@@ -12,7 +12,7 @@ export class SecaoComentario extends Component {
     console.log(this.state.comentario);
   };
 
-  /* Não consegui fazer implimir só uma linha no console.
+  /* Não consegui fazer imprimir só uma linha no console.
   
   imprimeNoConsole = (event) => {
     const comentarioFeito = event.target.value;

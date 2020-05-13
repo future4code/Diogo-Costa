@@ -4,6 +4,8 @@ import "./Post.css";
 import { IconeComContador } from "../IconeComContador/IconeComContador";
 import { IconeSalvarPostagem } from "../IconeSalvarPostagem/IconeSalvarPostagem";
 
+import iconeSalvoBranco from "../../img/bookmark_border-24px.svg";
+import iconeSalvoPreto from "../../img/bookmark-24px.svg";
 import iconeCoracaoBranco from "../../img/favorite-white.svg";
 import iconeCoracaoPreto from "../../img/favorite.svg";
 import iconeComentario from "../../img/comment_icon.svg";
@@ -35,15 +37,13 @@ class Post extends React.Component {
   };
 
   onClickSalvo = () => {
-    if (!this.state.curtido) {
+    if (!this.state.salvo) {
       this.setState({
-        curtido: true,
-        numeroCurtidas: this.state.numeroCurtidas + 1,
+        salvo: true,
       });
     } else {
       this.setState({
-        curtido: false,
-        numeroCurtidas: this.state.numeroCurtidas - 1,
+        salvo: false,
       });
     }
   };
@@ -68,6 +68,14 @@ class Post extends React.Component {
       iconeCurtida = iconeCoracaoPreto;
     } else {
       iconeCurtida = iconeCoracaoBranco;
+    }
+
+    let iconeSalvo;
+
+    if (this.state.salvo) {
+      iconeSalvo = iconeSalvoPreto;
+    } else {
+      iconeSalvo = iconeSalvoBranco;
     }
 
     let componenteComentario;
@@ -103,9 +111,8 @@ class Post extends React.Component {
           />
 
           <IconeComContador
-            icone={iconeCurtida}
-            onClickIcone={this.onClickCurtida}
-            //valorContador={this.state.numeroComentarios}
+            icone={iconeSalvo}
+            onClickIcone={this.onClickSalvo}
           />
 
           <IconeComContador
