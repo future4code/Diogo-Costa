@@ -9,6 +9,7 @@ import iconeSalvoPreto from "../../img/bookmark-24px.svg";
 import iconeCoracaoBranco from "../../img/favorite-white.svg";
 import iconeCoracaoPreto from "../../img/favorite.svg";
 import iconeComentario from "../../img/comment_icon.svg";
+
 import { SecaoComentario } from "../SecaoComentario/SecaoComentario";
 
 class Post extends React.Component {
@@ -110,7 +111,7 @@ class Post extends React.Component {
             valorContador={this.state.numeroCurtidas}
           />
 
-          <IconeComContador
+          <IconeSalvarPostagem
             icone={iconeSalvo}
             onClickIcone={this.onClickSalvo}
           />
