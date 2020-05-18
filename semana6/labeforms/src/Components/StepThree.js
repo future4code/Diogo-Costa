@@ -5,9 +5,6 @@ const Global = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px black solid;
-  height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
 `;
 
 const Inputs = styled.input`
@@ -32,7 +29,6 @@ class StepThree extends React.Component {
             <option value="">Curso técnico</option>
             <option value="">Curso de inglês</option>
           </SelectMenu>
-          <button>Próxima etapa</button>
         </Global>
       </div>
     );

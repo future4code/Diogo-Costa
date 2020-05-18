@@ -5,9 +5,6 @@ const Global = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px black solid;
-  height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
 `;
 
 const Inputs = styled.input`
@@ -18,6 +15,10 @@ const SelectMenu = styled.select`
 `;
 
 class StepOne extends React.Component {
+  state = {
+    page: 1,
+  };
+
   render() {
     return (
       <div>
@@ -36,7 +37,6 @@ class StepOne extends React.Component {
             <option value="">Ensino superior incompleto</option>
             <option value="">Ensino superior completo</option>
           </SelectMenu>
-          <button onClick={this.props.pageTwo}>Próxima etapa</button>
         </Global>
       </div>
     );
