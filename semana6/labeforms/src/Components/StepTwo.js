@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import StepThree from './StepThree';
+//import StepThree from './StepThree';
 
 const Global = styled.div`
   display: flex;
@@ -17,12 +17,14 @@ const Inputs = styled.input`
 
 class StepTwo extends React.Component {
   state = {
-    toPageThree: ""
+    toPageThree: '',
   };
 
-  pageThree = () => {
+  /*   pageThree = () => {
         this.setState({toPageThree: })
     }
+ */
+
   render() {
     return (
       <div>
