@@ -13,6 +13,7 @@ const MainContent = styled.main`
   font-family: Arial, Helvetica, sans-serif;
 `;
 
+// Minha solução para o botão.
 const ButtonBehavior = styled.button`
   cursor: pointer;
   &[disabled] {
