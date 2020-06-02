@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Container {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: solid 1px red;
+}
+
+
+.FormInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 3px black;
+  border-radius: 8px;
+}
+
+.FormInput button,
+input {
+  padding: 8px;
+  margin: 5px;
+  width: 200px;
+  border-radius: 5px;
+  border-color: rgba(128, 128, 128, 0.3);
+}
+
+.FormInput label {
+  margin-left: 5px;
+}
+
+.Fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
