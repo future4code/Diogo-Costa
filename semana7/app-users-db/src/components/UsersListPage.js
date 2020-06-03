@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
 import '../styles/App.css';
 
 const axiosConfig = {
@@ -51,7 +50,7 @@ class UsersListPage extends React.Component {
         {this.state.userList.map((user) => {
           return (
             <section>
-              {user.name}
+              <span>{user.name}</span>
               <span onClick={() => this.handleUserDeletion(user.id)}>X</span>
             </section>
           );

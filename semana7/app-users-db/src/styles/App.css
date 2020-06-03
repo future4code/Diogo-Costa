@@ -83,12 +83,28 @@ UserListPage
   border-radius: 8px;
 }
 
-.ListStyle span {
+.ListStyle span:nth-child(2) {
   color: red;
   cursor: pointer;
   margin: 10px;
+  font-size: 900;
+}
+
+.ListStyle span:nth-child(2):hover {
+  background-color: rgb(228, 154, 154);
+  border-radius: 25%;
 }
 
 .ListStyle section {
-  border: solid blue 1px;
+  box-shadow: 0 0 2px black;
+  padding: 4px;
+  margin: 10px 0;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ListStyle section:hover {
+  background-color: whitesmoke
 }
