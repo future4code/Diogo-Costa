@@ -1,7 +1,14 @@
+/*
+
+Global 
+
+*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 .Container {
@@ -15,6 +22,11 @@
   border: solid 1px red;
 }
 
+/*
+
+SignUpPage 
+
+*/
 
 .FormInput {
   display: flex;
@@ -44,4 +56,39 @@ input {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.ChangePageButtonStyle {
+  width: 300px;
+  padding: 8px;
+  margin: 20px;
+  border-radius: 6px;
+  border-color: rgba(128, 128, 128, 0);
+  box-shadow: 0 0 3px black;
+}
+
+/* 
+
+UserListPage 
+
+*/
+
+.ListStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  min-height: 300px;
+  box-shadow: 0 0 3px black;
+  border-radius: 8px;
+}
+
+.ListStyle span {
+  color: red;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.ListStyle section {
+  border: solid blue 1px;
 }
