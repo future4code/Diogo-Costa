@@ -1,10 +1,21 @@
 import React from 'react';
 import './App.css';
 import PlayListAdd from './components/PlayListAdd';
-import TogglePage from './components/TogglePage';
 import PlayListPage from './components/PlayListsPage';
 
 class App extends React.Component {
+  state = {
+    currentPage: 'PlayListAdd',
+  };
+
+  togglePageOnClick = () => {
+    if (this.state.currentPage === 'PlayListAdd') {
+      this.setState({ currentPage: 'PlayListsPage' });
+    } else {
+      this.setState({ currentPage: 'PlayListAdd' });
+    }
+  };
+
   render() {
     return (
       <>
@@ -23,3 +34,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+// http://awful-bottle.surge.sh/
