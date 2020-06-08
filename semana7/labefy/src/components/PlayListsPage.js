@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import TrackAdd from './TrackAdd';
 
 const axiosConfig = {
   headers: {
@@ -30,18 +31,41 @@ class PlayListPage extends React.Component {
       });
   };
 
+  handleDeletePlaylist = (playlistID) => {
+    axios
+      .delete(
+        `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${playlistID}`,
+        axiosConfig
+      )
+      .then(() => {
+        alert(`Usuário apagado com sucesso!`);
+        this.getPlayLists();
+      })
+      .catch((err) => {
+        console.log(`O ERRO FOI: ${err}`);
+      });
+  };
+
+  handleAddTracks = () => {
+
+  }
+
+
   render() {
     return (
       <>
         <div>
           {this.state.playlists.map((playlist) => {
             return (
-              <div>
-                <li>{playlist.name}</li>
-              </div>
+              <ul>
+                <li onClick={this.handleAddTracks}>{playlist.name}</li>
+                <button onClick={() => this.handleDeletePlaylist(playlist.id)}>
+                  X
+                </button>
+              </ul>
             );
           })}
-          <h1>ahuuha</h1>
+          <TrackAdd/>
         </div>
       </>
     );
