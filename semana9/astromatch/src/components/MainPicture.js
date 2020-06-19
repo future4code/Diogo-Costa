@@ -1,15 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { ContainerPicture } from "../styles/GlobalStyle";
+import Footer from "./Footer";
 
 const MainPicture = () => {
+  const [usersList, setUsersList] = useState([]);
+
+  useEffect(() => {
+    getMatches();
+  }, []);
+
+  const getMatches = () => {
+    axios
+      .get(
+        `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gaspar/person`
+      )
+      .then((res) => {
+        setUsersList(res.data.profile);
+        //console.log(res.data.profile.name);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  //console.log(usersList.id);
   return (
     <ContainerPicture>
-      <div>
-        <img
-          src="https://i.pinimg.com/236x/c2/b8/cb/c2b8cbb93b0687904f73169c66a7ba45--apps.jpg"
-          alt="logo tinder"
-        />
-      </div>
+      <span>{usersList.name}</span>
+      <img src={usersList.photo} alt="" />
+      <Footer match={usersList.id} />
     </ContainerPicture>
   );
 };

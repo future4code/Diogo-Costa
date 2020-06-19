@@ -27,7 +27,7 @@ export const MainCardStyle = styled.div`
 export const HeaderStyle = styled.div`
   width: 100%;
   height: 10%;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
   display: flex;
@@ -37,7 +37,6 @@ export const HeaderStyle = styled.div`
 
 // Main card Picture
 export const ContainerPicture = styled.div`
-  border: solid 1px black;
   width: 360px;
   height: 440px;
   display: flex;
@@ -45,17 +44,19 @@ export const ContainerPicture = styled.div`
   align-items: center;
   img {
     border-radius: 5px;
-    border: solid 1px red;
-    box-shadow: 0 0 4px black;
+    box-shadow: 0 0 8px gray;
+    width: 330px;
+    height: 440px;
   }
 `;
 
 // Match List
 export const ListStyle = styled.div`
+  width: 330px;
+  height: 440px;
   text-align: center;
   border-radius: 5px;
-  border: solid 1px red;
-  box-shadow: 0 0 4px black;
+  box-shadow: 0 0 8px gray;
   li {
     list-style: none;
   }
@@ -65,7 +66,6 @@ export const ListStyle = styled.div`
 export const FooterStyle = styled.div`
   width: 100%;
   height: 10%;
-  border-top: solid 1px black;
   position: fixed;
   bottom: 0;
   display: flex;
