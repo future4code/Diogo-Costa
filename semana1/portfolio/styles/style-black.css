@@ -8,7 +8,7 @@
 
 body {
   background-color: #151515;
-  color: white;
+  color: #ffffff;
   font-family: "Orbitron", sans-serif;
 }
 
@@ -44,14 +44,32 @@ body {
 }
 
 /* Social media */
-.social-img {
+.social-img1 {
+  width: 22px;
+  padding: 0 5px;
+  filter: opacity(0.5) drop-shadow(0 0 0 #03fdd7);
+}
+
+.social-img2 {
+  width: 22px;
+  padding: 0 5px;
+  filter: opacity(0.5) drop-shadow(0 0 0 #03fdd7);
+}
+
+.social-img3 {
+  width: 20px;
+  padding: 0 5px;
+  filter: opacity(0.5) drop-shadow(0 0 0 #03fdd7);
+}
+
+.social-img4 {
   width: 20px;
   padding: 0 5px;
   filter: opacity(0.5) drop-shadow(0 0 0 #03fdd7);
 }
 
 .social {
-  padding: 0 156px;
+  margin-left: 118px;
 }
 
 /* HOME BUTTON */
@@ -327,7 +345,7 @@ footer p {
   }
 
   .social {
-    padding: 0 136px;
+    margin-left: 98px;
   }
 
   .image-pc img {
