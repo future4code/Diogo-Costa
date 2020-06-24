@@ -16,8 +16,14 @@ const ListTripPage = () => {
     history.push("/details");
   };
 
+  const logoutBtn = () => {
+    window.localStorage.removeItem("token");
+    history.push("/");
+  };
+
   return (
     <div>
+      <button onClick={logoutBtn}>logout</button>
       <h1>List</h1>
       <button onClick={handleToCreate}>Create</button>
       <button onClick={handleToApproval}>Approval</button>
