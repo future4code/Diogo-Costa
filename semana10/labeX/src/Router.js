@@ -7,11 +7,12 @@ import ApplicationFormPage from "./Pages/ApplicationFormPage";
 import ListTripsPage from "./Pages/ListTripsPage";
 import CreateTripPage from "./Pages/CreateTripPage";
 import TripDetailsPage from "./Pages/TripDetailsPage";
+import ApprovalPage from "./Pages/ApprovalPage";
+import OpenListTripsPage from "./Pages/OpenListTripsPage";
 
 const Router = () => {
   return (
     <div>
-      <h1>Router</h1>
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
@@ -23,15 +24,18 @@ const Router = () => {
           <Route exact path="/form">
             <ApplicationFormPage />
           </Route>
-          <Route exact path="/create">
-            <CreateTripPage />
-          </Route>
           <Route exact path="/list">
             <ListTripsPage />
+          </Route>
+          <Route exact path="/create">
+            <CreateTripPage />
           </Route>
           <Route exact path="/details">
             <TripDetailsPage />
           </Route>
+          <Route exact path="/approval" component={ApprovalPage} />{" "}
+          {/* gostei dessa sintaxe */}
+          <Route exact path="/open" component={OpenListTripsPage} />
         </Switch>
       </BrowserRouter>
     </div>

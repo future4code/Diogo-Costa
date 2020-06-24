@@ -4,14 +4,14 @@ import { useHistory } from "react-router-dom";
 const ApplicationFormPage = () => {
   const history = useHistory();
 
-  const handleToHome = () => {
-    history.push("/");
+  const handleToOpenList = () => {
+    history.push("/open");
   };
 
   return (
     <div>
       <h1>Form</h1>
-      <button onClick={handleToHome}>home</button>
+      <button onClick={handleToOpenList}>List</button>
     </div>
   );
 };

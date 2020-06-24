@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-const LoginPage = () => {
+const ApprovalDetails = () => {
   const history = useHistory();
 
   const handleToList = () => {
@@ -10,11 +10,10 @@ const LoginPage = () => {
 
   return (
     <div>
-      {/* <Link to="/form">vai para form</Link */}
-      <h2>LoginPage</h2>
+      <h1>Approval</h1>
       <button onClick={handleToList}>List</button>
     </div>
   );
 };
 
-export default LoginPage;
+export default ApprovalDetails;
