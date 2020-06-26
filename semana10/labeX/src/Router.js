@@ -12,33 +12,31 @@ import OpenListTripsPage from "./Pages/OpenListTripsPage";
 
 const Router = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/login">
-            <LoginPage />
-          </Route>
-          <Route exact path="/form">
-            <ApplicationFormPage />
-          </Route>
-          <Route exact path="/list">
-            <ListTripsPage />
-          </Route>
-          <Route exact path="/create">
-            <CreateTripPage />
-          </Route>
-          <Route exact path="/details">
-            <TripDetailsPage />
-          </Route>
-          <Route exact path="/approval" component={ApprovalPage} />{" "}
-          {/* gostei dessa sintaxe */}
-          <Route exact path="/open" component={OpenListTripsPage} />
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route exact path="/login">
+          <LoginPage />
+        </Route>
+        <Route exact path="/form">
+          <ApplicationFormPage />
+        </Route>
+        <Route exact path="/list">
+          <ListTripsPage />
+        </Route>
+        <Route exact path="/create">
+          <CreateTripPage />
+        </Route>
+        <Route exact path="/details">
+          <TripDetailsPage />
+        </Route>
+        <Route exact path="/approval" component={ApprovalPage} />
+        {/* gostei dessa sintaxe */}
+        <Route exact path="/open" component={OpenListTripsPage} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 

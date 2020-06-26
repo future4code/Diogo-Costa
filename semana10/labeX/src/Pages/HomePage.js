@@ -1,10 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import styled from "styled-components";
+//import Header from "../Components/Header";
 
-const SuperBigPage = styled.div`
-  height: 100vh;
-`;
+//import styled from "styled-components";
 
 const HomePage = () => {
   const history = useHistory();
@@ -18,8 +16,8 @@ const HomePage = () => {
   };
 
   return (
-    <SuperBigPage>
-      <h1 id="sobe">HomePage</h1>
+    <div>
+      <h1>HomePage</h1>
       {/* <a href="#embaixo">vai pro botton</a> */}
       <main>
         <button onClick={handleToLogin}>Login</button>
@@ -27,9 +25,8 @@ const HomePage = () => {
       </main>
       {/*       <footer id="embaixo">
         footer
-        <a href="#sobe">sobe</a>
       </footer> */}
-    </SuperBigPage>
+    </div>
   );
 };
 
