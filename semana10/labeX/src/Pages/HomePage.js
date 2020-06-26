@@ -1,8 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-//import Header from "../Components/Header";
-
-//import styled from "styled-components";
+import { MainStyle, ContainerHomeStyle } from "../styles/GlobalStyles";
 
 const HomePage = () => {
   const history = useHistory();
@@ -16,17 +14,17 @@ const HomePage = () => {
   };
 
   return (
-    <div>
-      <h1>HomePage</h1>
+    <ContainerHomeStyle>
       {/* <a href="#embaixo">vai pro botton</a> */}
-      <main>
-        <button onClick={handleToLogin}>Login</button>
-        <button onClick={handleToForm}>Application</button>
-      </main>
+      <MainStyle>
+        <h1>HOMEPAGE</h1>
+        <button onClick={handleToLogin}>LOGIN</button>
+        <button onClick={handleToForm}>APPLY</button>
+      </MainStyle>
       {/*       <footer id="embaixo">
         footer
       </footer> */}
-    </div>
+    </ContainerHomeStyle>
   );
 };
 
