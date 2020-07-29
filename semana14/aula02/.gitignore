@@ -1,0 +1,4 @@
+
+# Excluded items
+node_modules/
+build/
