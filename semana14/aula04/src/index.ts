@@ -69,6 +69,20 @@ EXE5
 a) Pode dar problema que não lembro qual, mas é recomendado o uso de for() para esses casos.
 */
 
-const sendNotify = async (): Promise<void> => {
-    const 
+const sendNotifications = async (): Promise<void> => {
+	try {
+		const users = await axios.get(`${baseUrl}/subscribers/all`);
+
+		for (let user of users.data) {
+			await axios.post(`${baseUrl}/notifications/send`, {
+				subscriberId: user.id,
+				message: "Ta bom por aqui hoje",
+			});
+		}
+		console.log("All notifications sent!");
+	} catch (error) {
+		console.log(`Deu ruim: ${error.message}`);
+	}
 };
+
+sendNotifications();
