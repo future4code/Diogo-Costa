@@ -21,14 +21,14 @@ type User = {
 	email: string;
 };
 
-const main: () => Promise<User[]> = async (): Promise<User[]> => {
+/* const main: () => Promise<User[]> = async (): Promise<User[]> => {
 	try {
 		const users = await axios.get(`${baseUrl}/subscribers/all`);
-		/* console.log(
+		console.log(
 			users.data.map((item: any) => {
 				return item.name;
 			})
-		); */
+		);
 		return users.data.map((res: any) => {
 			return {
 				id: res.id,
@@ -42,31 +42,33 @@ const main: () => Promise<User[]> = async (): Promise<User[]> => {
 	}
 };
 
-main();
+main(); */
 
 /* 
 EXE04
-a)
+a) Estou perdido nas definições
 */
-/* 
-const body = {
-	title: "Jeff Bezos manda bejus",
-	content:
-		"Jeff Bezoz acaba de ganhar 13bi em um dia, e te mandou um beijo no ombro",
-	date: Date.now,
-};
- */
-const createNews = async (): Promise<void> => {
+
+/* const createNews = async (): Promise<void> => {
 	await axios.put(`${baseUrl}/news`, {
-		title: "Jeff Bezos manda bejus",
+		title: "Desfile de trios elétricos",
 		content:
-			"Jeff Bezoz acaba de ganhar 13bi em um dia, e te mandou um beijo no ombro",
-		date: 1590522289000,
+			"Hoje quinta feira 30/07 estamos tendo desfiles de trios elétricos na rua onde mora o professor João",
+		date: Date.now(),
 	});
 
-	//	const users = await axios.get(`${baseUrl}/news/all`);
+	const users = await axios.get(`${baseUrl}/news/all`);
 
-	//	console.log(users.data);
+	console.log(users.data);
 };
 
-createNews();
+createNews(); */
+
+/* 
+EXE5
+a) Pode dar problema que não lembro qual, mas é recomendado o uso de for() para esses casos.
+*/
+
+const sendNotify = async (): Promise<void> => {
+    const 
+};
