@@ -34,7 +34,7 @@ async function addUser(
 	name: string,
 	nickname: string,
 	email: string
-): Promise<any> {
+): Promise<void> {
 	try {
 		const result = await connection.raw(`
         INSERT INTO TodoListUser (id, name, nickname, email)
@@ -46,7 +46,6 @@ async function addUser(
         );
 	`);
 		console.log("Sucesso");
-		return result[0];
 	} catch (error) {
 		console.log(`Erro na inserção do user: ${error}`);
 	}
@@ -54,6 +53,21 @@ async function addUser(
 
 //addUser("002", "Clark Kent", "Sups", "superman@justiceleague.com");
 
+async function getUserByID(id: string): Promise<any> {
+	try {
+		const result = await connection.raw(`
+        SELECT * FROM TodoListUser
+        WHERE id = ${id};
+        `);
+		console.log(result[0]);
+		return result[0];
+	} catch (error) {
+		console.log("Erro ao localizar pelo ID" + error);
+	}
+}
+//getUserByID("003");
+
+// Express
 app.get("/superusers", async (req: Request, res: Response) => {
 	try {
 		const superusers = await showAllUsers();
@@ -64,7 +78,52 @@ app.get("/superusers", async (req: Request, res: Response) => {
 	}
 });
 
-// Sobre o server
+app.get("superusers/:id", async (req: Request, res: Response) => {
+	try {
+		const userID = { id: req.params.id };
+		await getUserByID(userID.id);
+
+		res.status(200).send({ message: "funcionou" });
+	} catch (error) {
+		res.status(400).send({ message: error.message });
+	}
+});
+
+app.put("/superusers", async (req: Request, res: Response) => {
+	try {
+		const userData = {
+			id: req.body.id,
+			name: req.body.name,
+			nickname: req.body.nickname,
+			email: req.body.email,
+		};
+		await addUser(
+			userData.id,
+			userData.name,
+			userData.nickname,
+			userData.email
+		);
+		res.status(200).send({ message: "Super user adicionado com sucesso" });
+	} catch (error) {
+		res.status(400).send({ message: error.message });
+	}
+});
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+// Sobe o server
 const server = app.listen(process.env.PORT || 3000, () => {
 	if (server) {
 		const address = server.address() as AddressInfo;
