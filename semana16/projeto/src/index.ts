@@ -59,13 +59,13 @@ async function getUserByID(id: string): Promise<any> {
         SELECT * FROM TodoListUser
         WHERE id = ${id};
         `);
-		console.log(result[0]);
-		return result[0];
+		// console.log(result[0][0].name);
+		return result[0][0].name;
 	} catch (error) {
 		console.log("Erro ao localizar pelo ID" + error);
 	}
 }
-//getUserByID("003");
+// getUserByID("003");
 
 // Express
 app.get("/superusers", async (req: Request, res: Response) => {
@@ -78,12 +78,12 @@ app.get("/superusers", async (req: Request, res: Response) => {
 	}
 });
 
-app.get("superusers/:id", async (req: Request, res: Response) => {
+app.get(`/superusers/:id`, async (req: Request, res: Response) => {
 	try {
-		const userID = { id: req.params.id };
-		await getUserByID(userID.id);
+		const userData = { id: req.params.id };
+		const result = await getUserByID(userData.id);
 
-		res.status(200).send({ message: "funcionou" });
+		res.status(200).send(result);
 	} catch (error) {
 		res.status(400).send({ message: error.message });
 	}
