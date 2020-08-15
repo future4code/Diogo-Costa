@@ -67,7 +67,28 @@ async function getUserByID(id: string): Promise<any> {
 }
 // getUserByID("003");
 
-// Express
+async function updateUserByID(
+	id: string,
+	name: string,
+	nickname: string
+): Promise<void> {
+	try {
+		await connection.raw(`
+			UPDATE TodoListUser
+			SET 
+				name = '${name}',
+				nickname = '${nickname}'
+			WHERE
+				id = '${id}';`);
+	} catch (error) {
+		console.log(`Èrro ao editar o usuário: ${error}`);
+	}
+}
+
+// updateUserByID("001", "Damian Wayne", "Dark Knight");
+
+// Express -------------------------------------------------------------------------------->>
+
 app.get("/superusers", async (req: Request, res: Response) => {
 	try {
 		const superusers = await showAllUsers();
@@ -104,6 +125,21 @@ app.put("/superusers", async (req: Request, res: Response) => {
 			userData.email
 		);
 		res.status(200).send({ message: "Super user adicionado com sucesso" });
+	} catch (error) {
+		res.status(400).send({ message: error.message });
+	}
+});
+
+app.post(`/superusers/edit/:id`, async (req: Request, res: Response) => {
+	try {
+		const userData = {
+			id: req.params.id,
+			name: req.body.name,
+			nickname: req.body.nickname,
+		};
+		await updateUserByID(userData.id, userData.name, userData.nickname);
+
+		res.status(200).send({ message: "Dados alterados com sucesso¹" });
 	} catch (error) {
 		res.status(400).send({ message: error.message });
 	}
