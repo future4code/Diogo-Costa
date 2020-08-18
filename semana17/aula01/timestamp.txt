@@ -1,0 +1,31 @@
+ordem dos apps importa 9:10
+
+como verificar se inputs foram corretos 10:40
+
+POST envia e recebe um body na req
+PUT só envia um body
+
+como gerar UUID 18:00
+
+Exercício 1 -- 24:44
+
+PAUSA 32:00
+
+JWT 40:00
+
+Exercício 2 -- 48:00
+npm i jsonwebtoken
+npm i @types/jsonwebtoken --save-dev
+
+Separando @types para dev dependencies50:30
+
+Exercício 3
+??
+
+PAUSA
+
+Implementação de Login 1:39:40
+
+
+
+
