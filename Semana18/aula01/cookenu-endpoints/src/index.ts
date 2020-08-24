@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
 import { signUp } from "./endpoints/signUp";
+import { signUpy } from "./endpoints/signUpy";
 import { login } from "./endpoints/login";
 import { getUserProfile } from "./endpoints/getUserProfile";
 import { getUser } from "./endpoints/getUser";
@@ -25,6 +26,9 @@ app.get("/recipe/:id", getRecipe);
 app.post("/user/follow", followUser);
 app.post("/user/unfollow", unFollowUser);
 app.get("/feed", getFeed);
+
+// My endpoints
+app.put("/signupy", signUpy);
 
 const server = app.listen(process.env.PORT || 3003, () => {
 	if (server) {

@@ -4,67 +4,95 @@ import { UserDatabase } from "../data/UserDatabase";
 import { Authenticator } from "../services/Authenticator";
 
 export class UserBusiness {
+	public async signUp(
+		name: string,
+		email: string,
+		password: string
+	): Promise<string> {
+		if (!name || !email || !password) {
+			throw new Error(
+				"Insira todas as informações necessárias para o cadastro"
+			);
+		}
 
-    public async signUp(name: string, email: string, password: string): Promise<string> {
+		if (password.length < 6) {
+			throw new Error("A senha deve conter no mínimo seis caracteres");
+		}
 
-        if (!name || !email || !password) {
-            throw new Error('Insira todas as informações necessárias para o cadastro');
-        }
+		const idGenerator = new IdGenerator(); //colocar na business
+		const id = idGenerator.generateId();
 
-        if (password.length < 6) {
-            throw new Error('A senha deve conter no mínimo seis caracteres');
-        }
+		const hashManager = new HashManager(); //colocar na business
+		const hashPassword = await hashManager.hash(password);
 
-        const idGenerator = new IdGenerator();//colocar na business
-        const id = idGenerator.generateId();
+		const userDataBase = new UserDatabase(); // colocar na business
+		await userDataBase.registerUser(id, name, email, hashPassword);
 
-        const hashManager = new HashManager(); //colocar na business
-        const hashPassword = await hashManager.hash(password);
+		const authenticator = new Authenticator();
+		const token = authenticator.generateToken({ id });
 
-        const userDataBase = new UserDatabase(); // colocar na business
-        await userDataBase.registerUser(
-            id,
-            name,
-            email,
-            hashPassword
-        );
+		return token;
+	}
 
-        const authenticator = new Authenticator();
-        const token = authenticator.generateToken({ id });
+	public async signUpy(
+		name: string,
+		email: string,
+		password: string
+	): Promise<string> {
+		if (!name || !email || !password) {
+			throw new Error(
+				"Insira todas as informações necessárias para o signupY"
+			);
+		}
 
-        return token;
-    }
+		if (password.length < 6) {
+			throw new Error("A senha deve conter no mínimo seis caracteres");
+		}
 
-    public async login(email: string, password: string): Promise<string> {
+		const idGenerator = new IdGenerator(); //colocar na business
+		const id = idGenerator.generateId();
 
-        const userDataBase = new UserDatabase();//dependencia
-        const user = await userDataBase.getUserByEmail(email);
+		const hashManager = new HashManager(); //colocar na business
+		const hashPassword = await hashManager.hash(password);
 
-        const hashManager = new HashManager();//dependencia
-        const isPasswordCorrect = await hashManager.compare(password, user.password);
+		const userDataBase = new UserDatabase(); // colocar na business
+		await userDataBase.registerUser(id, name, email, hashPassword);
 
-        if (!isPasswordCorrect) {
-            throw new Error('Usuário ou senha errados');
-        }//regra de negocio
+		const authenticator = new Authenticator();
+		const token = authenticator.generateToken({ id });
 
-        const authenticator = new Authenticator();//dependencia
-        const token = authenticator.generateToken({
-            id: user.id
-        });
+		return token;
+	}
 
-        return token;
-    }
+	public async login(email: string, password: string): Promise<string> {
+		const userDataBase = new UserDatabase(); //dependencia
+		const user = await userDataBase.getUserByEmail(email);
 
-    public async getUserProfile(token: string): Promise<any> {
+		const hashManager = new HashManager(); //dependencia
+		const isPasswordCorrect = await hashManager.compare(
+			password,
+			user.password
+		);
 
-        const authenticator = new Authenticator();
-        const authenticationData = authenticator.verify(token);
+		if (!isPasswordCorrect) {
+			throw new Error("Usuário ou senha errados");
+		} //regra de negocio
 
-        const userDataBase = new UserDatabase();//dependencia
-        const user = await userDataBase.getUserById(authenticationData.id);
+		const authenticator = new Authenticator(); //dependencia
+		const token = authenticator.generateToken({
+			id: user.id,
+		});
 
-        return user;
+		return token;
+	}
 
-    }
+	public async getUserProfile(token: string): Promise<any> {
+		const authenticator = new Authenticator();
+		const authenticationData = authenticator.verify(token);
 
+		const userDataBase = new UserDatabase(); //dependencia
+		const user = await userDataBase.getUserById(authenticationData.id);
+
+		return user;
+	}
 }

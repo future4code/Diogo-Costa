@@ -3,11 +3,12 @@ import { Request, Response } from "express";
 import { BaseDatabase } from "../data/BaseDatabase";
 import { UserBusiness } from "../business/UserBusiness";
 
-export const signUp = async (req: Request, res: Response) => {
+export const signUpy = async (req: Request, res: Response) => {
 	try {
 		const name = req.body.name;
 		const email = req.body.email;
 		const password = req.body.password;
+		const role = req.body.role;
 
 		const userBusiness = new UserBusiness();
 		const token = await userBusiness.signUp(name, email, password);
@@ -21,5 +22,6 @@ export const signUp = async (req: Request, res: Response) => {
 			message: e.message,
 		});
 	}
+
 	await BaseDatabase.destroyConnection();
 };
