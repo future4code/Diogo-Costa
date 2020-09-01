@@ -220,4 +220,9 @@ describe("function casino", () => {
 			expect(error).not.toBe(undefined);
 		}
 	});
+
+	afterAll(async () => {
+		await deletePostById("Id do post");
+		await destroyConnection();
+	});
 });
