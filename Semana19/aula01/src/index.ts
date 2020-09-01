@@ -1,3 +1,4 @@
+
 export interface User {
 	name: string;
 	balance: number;
@@ -16,4 +17,5 @@ export const performPurchase = (
 	return undefined;
 };
 
-//! Parei no Módulo 5, aula 63, 1:15:00
+//! Parei no Módulo 5, aula 63, 1:32:00
+//! https://vimeo.com/groups/648735/videos/453327876

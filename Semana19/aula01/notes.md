@@ -82,17 +82,58 @@ test("Testando saldo MENOR que o valor da compra", () => {
 _a. Leia os códigos fornecidos acima com calma. Veja se não ficou com nenhuma dúvida._
 
 ```
-
+ok
 ```
 
 _b. Implemente a função_
 
 ```
+export function verifyAge(casino: Casino, users: User[]): Result {
+	const allowed: User[] = [];
+	const unAllowed: User[] = [];
 
+	for (const user of users) {
+		if (casino.location === LOCATION.EUA) {
+			if (user.age >= 21) {
+				allowed.push(user);
+			} else {
+				unAllowed.push(user);
+			}
+		} else if (casino.location === LOCATION.BRAZIL) {
+			if (user.age >= 18) {
+				allowed.push(user);
+			} else {
+				unAllowed.push(user);
+			}
+			break;
+		}
+	}
+
+	return {
+		brazilians: {
+			allowed: allowed
+				.filter((user) => user.nationality === NATIONALITY.BRAZILIAN)
+				.map((u) => u.name),
+			unAllowed: unAllowed
+				.filter((user) => user.nationality === NATIONALITY.BRAZILIAN)
+				.map((u) => u.name),
+		},
+		americans: {
+			allowed: allowed
+				.filter((user) => user.nationality === NATIONALITY.AMERICAN)
+				.map((u) => u.name),
+
+			unAllowed: unAllowed
+				.filter((user) => user.nationality === NATIONALITY.AMERICAN)
+				.map((u) => u.name),
+		},
+	};
+}
 ```
 
 _c. O que foi mais difícil de fazer?_
 
 ```
-
+Não consegui fazer se olhar o gabarito, achei que estava ficando muito longo e imaginei estar fazendo errado.
+Preciso pegar mais intimidade em saber quando usar high order functions, porque elas nunca veem a minha mente como possível solução.
 ```
