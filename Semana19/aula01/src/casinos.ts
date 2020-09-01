@@ -1,18 +1,3 @@
-// casino
-// 	name
-// 	country
-// 		EUA
-// 		BRAZIL
-
-// users
-// 	name
-// 	nationality
-// 		AMERICAN
-// 		BRAZILIAN
-// 	age
-
-// 18 - 21
-
 export enum LOCATION {
 	EUA = "EUA",
 	BRAZIL = "BRAZIL",
@@ -85,3 +70,4 @@ export function verifyAge(casino: Casino, users: User[]): Result {
 		},
 	};
 }
+

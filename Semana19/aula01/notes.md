@@ -137,3 +137,6 @@ _c. O que foi mais difícil de fazer?_
 Não consegui fazer se olhar o gabarito, achei que estava ficando muito longo e imaginei estar fazendo errado.
 Preciso pegar mais intimidade em saber quando usar high order functions, porque elas nunca veem a minha mente como possível solução.
 ```
+
+## Exercício 4 
+
